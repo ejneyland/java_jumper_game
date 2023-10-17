@@ -2,10 +2,12 @@ import java.util.Scanner;
 
 public class Input 
 {
-  
+  private Scanner scanner;
+
   public Input() 
   {
     // default constructor
+    scanner = new Scanner(System.in);
   }
 
   // char input
@@ -35,10 +37,7 @@ public class Input
   // String input
   public String acceptStringInput(String prompt) 
   {
-    Scanner scanner = new Scanner(System.in);
     System.out.println(prompt);
-    String input = scanner.nextLine();
-    scanner.close();
-    return input;
+    return scanner.nextLine();
   }
 }
